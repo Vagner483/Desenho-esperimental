@@ -1,0 +1,135 @@
+---
+title: "Desenho experimental"
+subtitle: "CDEEP"
+author: "Vagner Rebouças"
+institute: "Laboratório de Ecologia Aplicada"
+date: "14-02-2022"
+output:
+  xaringan::moon_reader:
+    css: default
+---
+
+# Introdução
+
+```{r pressure10, echo=FALSE, fig.align='left', out.width='160%'}
+knitr::include_graphics("invasao.png")
+```
+---
+#Controle de invasoras
+-Efeitos da remoção de uma espécie é o resultado de pelo menos três componentes diferentes:
+  
+ 1. perda de um determinado organismo
+ 2. resposta de outros organismos a essa perda
+ 3. ato de remoção  
+
+![Ganho e perda de espécies](https://s3-cartx-ecom-images-prd.s3.us-east-2.amazonaws.com/static/products_images/iMPfiYcWpy3oVVhJM2QCQDcinIzV4GuEqKYE1FET.gif) 
+---
+#Pergunta
+Qual o efeito da remoção da invasora e adição de nutrientes na regeneração natural na Caatinga?
+
+![Ganho e perda de espécies](https://media1.giphy.com/media/h4tYUaU42SvWwxsNOB/200.gif)
+
+---
+# Delineamento experimental
+
+```{r pressure1, echo=FALSE, fig.align='left', out.width='140%'}
+knitr::include_graphics("plots.png")
+```
+---
+# um ano depois...
+```{r pressure5, echo=FALSE, fig.align='left', out.width='140%'}
+knitr::include_graphics("pulso.png")
+```
+---
+# Variáveis
+```{r echo=FALSE}
+var <- c ("Diversidade funcional", "Diversidade filogenética", "Regeneração", "Biomassa")
+
+ind <-  c("riqueza, uniformidade, divergência e dispersão funcional", "distância filogenética", "riqueza de plântulas", "quantidade de serrapilheira do solo")
+
+met <-  c("Medição de traits e cobertura vegetal", "Soma das distâncias entre os ramos da árvore filogenética", "Número de espécies", "Coleta de serrapilheira do solo") 
+
+data <- c("var", "ind", "met")
+
+library(knitr)
+library(xaringan)
+
+df<- data.frame(Variáveis=var, indicadores=ind, Métodos=met)
+
+kable(df)
+```
+---
+#Traits funcionais
+  
+  - Traits de crescimento, sobrevivência e reprodução
+    
+  - Forma e função (tamanho e espectro de economia foliar)
+  
+```{r pressure2, echo=FALSE, fig.align='left', out.width='80%'}
+knitr::include_graphics("form and function.png")
+```
+---
+#Coleta de traits funcionais
+  
+ - Variação temporal dos traits
+  
+ - Quais traits são dominantes antes e após a remoção?
+   
+```{r echo=FALSE}
+library(knitr)
+traits <- c ("folha", "caule", "sementes")
+n.ind <-  c(2, 2,2)
+n.org <- c(2, 2, 100)
+data <- c("traits", "n.ind", "n.org")
+
+df<- data.frame(Traits=traits, Individuos = n.ind, Orgaos = n.org) 
+kable(df)
+```
+---
+#Coleta de solo 
+  
+    
+      
+- 4 amostras de solo por parcela
+
+- A cada 6 meses por 2 anos
+  
+```{r pressure8, echo=FALSE, fig.align='right', out.width='60%'}
+knitr::include_graphics("solo1.jpg")
+```
+---
+#Coleta de solo
+![Ganho e perda de espécies](https://nutnet.org/sites/default/files/inline-images/Screen%20Shot%202018-03-14%20at%2011.07.55%20AM_0.png) 
+---
+#Coleta de solo
+![Ganho e perda de espécies](https://nutnet.org/sites/default/files/inline-images/Screen%20Shot%202018-03-14%20at%2011.08.53%20AM_1.png) 
+---
+#Coleta de solo
+![Ganho e perda de espécies](https://nutnet.org/sites/default/files/inline-images/Screen%20Shot%202018-03-14%20at%2011.45.15%20AM.png)
+---
+#Cobertura vegetal
+- Avaliação visual da área relativa coberta pelas espécies em um quadrado
+  
+```{r pressure7, echo=FALSE, fig.align='left', out.width='60%'}
+knitr::include_graphics("Cobertura.jpeg")
+```
+---
+#Coleta serrapilheira
+  
+ - Coleta de toda a serrapilheira acima do solo 
+   
+ - Pesagem da serrapilheira
+   
+```{r pressure13, echo=FALSE, fig.align='left', out.width='50%'}
+knitr::include_graphics("serra.jpeg")
+```
+---
+#Cronograma
+
+```{r pressure12, echo=FALSE, fig.align='center', out.width='200%'}
+knitr::include_graphics("cro.png")
+```
+---
+![Ganho e perda de espécies](http://media.giphy.com/media/eLKMSFHyTbjri/giphy.gif)
+
+pagedown::chrome_print("index.html")
